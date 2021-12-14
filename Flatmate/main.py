@@ -67,9 +67,17 @@ class PDF:
         webbrowser.open(self.filename)
 
 
-the_bill = Bill(500, "Jan 2020")
-flatmate1 = Flatmate("Aditya", 16)
-flatmate2 = Flatmate("Ashish", 17)
+bill = int(input("Enter of bill: "))
+period = input("This amount for which period: ")
+flatmate1name = input("Enter name of flatmate1: ")
+flatmate1statyedinhouse = int(input("Number of days stayed in house: "))
+flatmate2name = input("Enter name of flatmate2: ")
+flatmate2statyedinhouse = int(input("Number of days stayed in house: "))
+
+
+the_bill = Bill(bill, period)
+flatmate1 = Flatmate(flatmate1name, flatmate1statyedinhouse)
+flatmate2 = Flatmate(flatmate2name, flatmate2statyedinhouse)
 
 # print(flatmate1.amount_to_pay(the_bill, flatmate2))
 # print(flatmate2.amount_to_pay(the_bill, flatmate1))
