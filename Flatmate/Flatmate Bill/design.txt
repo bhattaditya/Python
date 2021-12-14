@@ -1,0 +1,16 @@
+Title: Flatmate Bill
+
+Description: App that takes bill amount as input for a particular period. Divides the bill on basics of each flatmates stayed in the house and 
+return how much each flatmate has to pay. Also PDF report is generated.
+
+classes: Bill, PDF, Flatmate (as of now only these)
+
+Bill
+    amount
+    period
+Flatmate
+    name
+    days_in_house
+    amount_to_pay(bill)
+PDF
+    generate_PDF(flatmate1, flatmate2, bill)
