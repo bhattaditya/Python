@@ -66,8 +66,14 @@ class PDF:
         pdf_file.output(self.filename)
         webbrowser.open(self.filename)
 
+while True:
+    try:
+        amount = int(input("Enter of bill: "))
+        break
+    except ValueError as e:
+        print("floating point number is expected...")
+        print(e)
 
-bill = int(input("Enter of bill: "))
 period = input("This amount for which period: ")
 flatmate1name = input("Enter name of flatmate1: ")
 flatmate1statyedinhouse = int(input("Number of days stayed in house: "))
@@ -75,15 +81,15 @@ flatmate2name = input("Enter name of flatmate2: ")
 flatmate2statyedinhouse = int(input("Number of days stayed in house: "))
 
 
-the_bill = Bill(bill, period)
+the_bill = Bill(amount, period)
 flatmate1 = Flatmate(flatmate1name, flatmate1statyedinhouse)
 flatmate2 = Flatmate(flatmate2name, flatmate2statyedinhouse)
 
-# print(flatmate1.amount_to_pay(the_bill, flatmate2))
-# print(flatmate2.amount_to_pay(the_bill, flatmate1))
+print(flatmate1.amount_to_pay(the_bill, flatmate2))
+print(flatmate2.amount_to_pay(the_bill, flatmate1))
 
-# a = flatmate1.amount_to_pay(the_bill, flatmate2)
-# b = flatmate2.amount_to_pay(the_bill, flatmate1)
+a = flatmate1.amount_to_pay(the_bill, flatmate2)
+b = flatmate2.amount_to_pay(the_bill, flatmate1)
 
 # print(a+b, "  ", the_bill.amount)
 
