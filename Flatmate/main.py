@@ -1,5 +1,6 @@
 from fpdf import FPDF
 import webbrowser
+import os
 
 class Bill:
     """
